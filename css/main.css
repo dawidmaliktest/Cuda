@@ -1,0 +1,503 @@
+body {
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 1.5;
+	color: #ffffff;
+}
+
+/* Site header -------------------------------------------------------------- */
+
+.site-header {
+	/*position: absolute;*/
+	background-color: #87509c;
+}
+
+.site-header .site-logo {
+	display: inline-block;
+	height: 160px;
+	line-height: 160px;
+	float: left;
+	margin: 0;
+}
+
+.site-header .main-menu::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.site-header .main-menu ul {
+	display: block;
+	float: right;
+	margin: 0;
+	padding:  68px 0;
+	list-style: none;
+}
+
+.site-header .main-menu ul::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+@media (max-width: 992px) {
+	.site-header .site-logo {
+		float: none;
+	}
+	.site-header .main-menu ul {
+		float: none;
+		padding: 0;
+	
+	}
+	.site-header .main-menu ul li {
+		width: 100%;
+		padding: 10px 0
+	}
+}
+
+.site-header .main-menu ul li {
+	display: block;
+	float: left;
+	margin: 0 5px;
+}
+
+.site-header .main-menu ul li a {
+	padding: 4px 15px;
+	border-radius: 3px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.site-header .main-menu ul li a:hover {
+	background-color: rgba(0,0,0,0.25);
+}
+
+/* Sections ----------------------------------------------------------------- */
+
+.section {
+	padding-top: 120px;
+	padding-bottom: 60px;
+}
+
+.section .section-header {
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.section .section-header .section-title {
+	margin: 0;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.section .section-header .section-description {
+	font-size: 18px;
+}
+
+/* Adds separator to description, if description is directly behind title */
+.section .section-header > .section-title + .section-description::before {
+	content: '';
+	display: block;
+	width: 90px;
+	height: 4px;
+	margin: 15px auto;
+	background-color: rgba(0,0,0,0.15);
+}
+
+/* Welcome section ---------------------------------------------------------- */
+
+.welcome-section {
+	
+	text-align: center;
+}
+
+.welcome-section .welcome-text {
+	margin-top: 120px;
+	margin-bottom: 60px;
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.welcome-section .welcome-button {
+	background-color: #eb7d4b;
+	margin-bottom: 120px;
+}
+
+/* Services section --------------------------------------------------------- */
+
+.services-section {
+	background-color: #17c2a4;
+	text-align: center;
+}
+.services-section .service-element {
+	margin-bottom: 60px;
+}
+.services-section .service-icon {
+	margin-bottom: 60px;
+}
+.services-section .service-title {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.services-section .service-description {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+/* Team section ------------------------------------------------------------- */
+
+.team-section {
+	background-color: #e7f1f8;
+	color: #3c4761;
+	text-align: center;
+}
+
+.team-section .team-element {
+	margin-bottom: 60px;
+}
+
+.team-section .team-picture {
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+}
+
+.team-section .team-name {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.team-section .team-title {
+	color: #30bae7;
+	font-size: 16px;
+}
+
+.team-section .team-description {
+	font-size: 16px;
+	margin: 30px 0;
+}
+
+.team-section .social-links a {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border-radius: 32px;
+	background-color: #bdd1df;
+	line-height: 32px;
+	margin: 0 6px;
+}
+
+.team-section .social-links a.icon {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.team-section .social-links a.facebook{
+	background-image: url('../img/facebook.png');
+}
+.team-section .social-links a.linkedin{
+	background-image: url('../img/linkedin.png');
+}
+.team-section .social-links a.mail{
+	background-image: url('../img/mail.png');
+}
+.team-section .social-links a.twitter{
+	background-image: url('../img/twitter.png');
+}
+
+/* Skills section ----------------------------------------------------------- */
+
+.skill-section.section {
+	padding-bottom: 60px;
+} 
+.skill-section .skill-element {
+	margin-bottom: 60px;
+}
+
+.skill-section {
+	background-color: #ffffff;
+	color: #3c4761;
+	text-align: center;
+}
+
+.skill-section .circle-progress > svg {
+	width: 160px;
+	height: 160px;
+}
+
+.skill-section .skill-name {
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+/* Circle progress ---------------------------------------------------------- */
+
+.circle-progress .base,  .circle-progress .progress {
+	cx: 50%;
+	cy: 50%;
+	r: 45.5%; /* <= 50% - (9% / 2) */
+	stroke-width: 9%;
+	fill: none;
+}
+
+.circle-progress .base {
+	stroke: #dfe8ed;
+}
+
+.circle-progress .progress {
+	transform: rotate(-90deg);
+	transform-origin: center center;
+}
+
+.circle-progress .text {
+	fill: currentColor;
+	font-size: 0;
+	font-weight: 300;
+	text-anchor: middle;
+}
+
+.circle-progress .text .percent {
+	font-size: 50px;
+	alignment-baseline: central;
+}
+
+.circle-progress .text .unit {
+	font-size: 32px;
+	alignment-baseline: mathematical;
+}
+
+/* Portfolio section -------------------------------------------------------- */
+
+.portfolio-section {
+	background-color: #ffdd99;
+	color: #393939;
+	text-align: center;
+}
+
+.portfolio-section .section-header {
+	margin-bottom: 30px;
+}
+
+.portfolio-section .portfolio-category {
+	margin: 40px 0;
+}
+
+.portfolio-section .portfolio-category .button {
+	margin: 0 5px;
+	margin-bottom: 20px;
+	padding: 5px 28px;
+	border-radius: 4px;
+	background-color: rgba(0,0,0,0.08);
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.portfolio-section .portfolio-category .button.select {
+	background-color: #ffffff;
+}
+
+.portfolio-section .portfolio-category .button input[type="radio"] {
+	display: none;
+}
+
+.portfolio-section .load-more-button {
+	margin-top: 20px;
+	background-color: #17c2a4;
+	color: #ffffff;
+}
+
+.portfolio-section .portfolio-project {
+	margin-bottom: 60px;
+}
+
+.portfolio-section .portfolio-project .preview {
+	display: inline-block;
+	max-width: 541px;
+	width: 100%;
+}
+.portfolio-section .portfolio-project .preview img {
+	width: 100%;
+}
+
+.portfolio-section .portfolio-project .title {
+	display: inline-block;
+	width: 100%;
+	margin-top: 30px;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+/* Testimonials section ----------------------------------------------------- */
+
+.testimonials-section.section {
+	background-color: #d74680;
+	color: #ffffff;
+	padding-bottom: 0;
+	text-align: center;
+}
+
+.testimonials-section .testimonials {
+	text-align: left;
+}
+
+.testimonials-section .testimonial {
+	margin-bottom: 120px;
+}
+
+.testimonials-section .testimonial .picture {
+	max-width: 100px;
+	max-height: 100px;
+	width: 100%;
+	border-radius: 100px;
+}
+
+.testimonials-section .testimonial .short-quote {
+	font-size: 21px;
+	font-style: italic;
+}
+
+.testimonials-section .testimonial .name {
+	display: block;
+	margin-top: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.testimonials-section .testimonial .job-title {
+	display: block;
+	font-size: 18px;
+	color: #ffdd99;
+}
+
+/* Contact section ---------------------------------------------------------- */
+
+.contact-section {
+	background-color: #3c5499;
+	color: #ffffff;
+	/*text-align: center;*/
+}
+
+.contact-section abbr[title] {
+	border: none;
+	text-decoration: none;
+}
+
+.contact-form {
+	text-align: center;
+}
+
+.contact-form .col-center {
+	float: none;
+	margin: 0 auto;
+}
+
+.contact-form  input[type="text"], 
+.contact-form  input[type="email"], 
+.contact-form  textarea  {
+	border: none;
+	border-radius: 3px;
+	padding: 15px 25px;
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #273a71;
+}
+
+.contact-form  input[type="text"], 
+.contact-form  input[type="email"] {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.contact-form  textarea {
+	display: inline-block;
+	width: 100%;
+	height: 200px;
+	resize: vertical;
+	margin-bottom: 60px;
+}
+
+.contact-form  .large-button {
+	background-color: #30BAE7;
+	margin-bottom: 60px;
+}
+
+/* Footer ------------------------------------------------------------------- */
+
+.footer {
+	background-color: #344b8e;
+	color: #ffffff;
+	padding: 20px 0;
+}
+
+.footer .social-media-links {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.footer .social-media-links li {
+	display: inline-block;
+	padding: 0;
+}
+
+.footer .social-media-links li a {
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	margin: 25px;
+}
+
+.footer .social-media-links li a:hover {
+	color: #30bae7;
+}
+
+/* Buttons ------------------------------------------------------------------ */
+
+.large-button {
+	display: inline-block;
+	padding: 20px 60px;
+	padding-bottom: 25px;
+	border-radius: 3px;
+	border: none;
+	box-shadow: inset 0 -5px 0 rgba(0,0,0,0.15);
+	background-color: rgba(0,0,0,0.25);
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/* Other */
+
+h1 {font-size: 48px;}
+h2 {font-size: 40px;}
+h3 {font-size: 32px;}
+h4 {font-size: 24px;}
+h5 {font-size: 18px;}
+h6 {font-size: 16px;}
+h1, h2, h3, h4, h5, h6 {
+ font-weight: 700; 
+}
+
+/* Bootstrap */
+a {
+	color: #ffffff;
+}
+a:focus,
+a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+button:focus, input:focus {
+	outline: none;
+}
